@@ -1,0 +1,18 @@
+<%= form_for @release do |f| %>
+<fieldset>
+	<ol>
+		<li>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+		</li>
+		<li>
+			<%= f.label :description %>
+			<%= f.text_area :description %>
+		</li>
+	</ol>
+</fieldset>
+<fieldset>
+	<%= submit_tag "Submit", :id =>"submit-btn" %>
+</fieldset>
+<% end %>
+

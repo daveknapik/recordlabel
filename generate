@@ -1,0 +1,22 @@
+Script started on Mon Dec  6 16:05:33 2010
+bash-3.2$ k[Kl
+bash: l: command not found
+bash-3.2$ quit
+bash: quit: command not found
+bash-3.2$ q
+bash: q: command not found
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ q
+bash: q: command not found
+bash-3.2$ \
+> ;
+bash: syntax error near unexpected token `;'
+bash-3.2$ h[Klogout
+bash: logout: not login shell: use `exit'
+bash-3.2$ exit
+exit
+
+Script done on Mon Dec  6 16:05:51 2010

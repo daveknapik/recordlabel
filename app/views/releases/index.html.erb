@@ -1,0 +1,23 @@
+<%- flash.each do |name, msg| -%>
+	<%= content_tag :div, msg, :id => "flash_#{name}", :class => "notice" %>
+<%- end -%>
+
+
+<%- if @releases.empty? -%>
+	<div class="release">
+		<p>There are no releases</p>
+		<p>Would you like to <%= link_to 'add a release', new_release_path %>?</p>
+	</div>
+<%- else -%>
+	<% for release in @releases do %>
+		<div id="release<%= release.id %>" class="release">
+			<h3><%= link_to release.title, release_path(release) %></h3>
+			<p><%= release.description %></p>
+			<p>
+				<%= link_to 'Edit', edit_release_path(release), :id => "edit" << release.id.to_s %>
+				 | 
+				<%= link_to_destroy 'Delete', release_path(release), confirm_destroy_release_path(release), form_authenticity_token, "delete" << release.id.to_s %>
+			</p>
+		</div>
+	<% end %>
+<%- end -%>
