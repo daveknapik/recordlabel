@@ -1,0 +1,5 @@
+page << '$("#delete' + @release.id.to_s + '").closest("div").fadeOut();'
+
+if @release_count == 0
+  page << '$("#container").prepend("' + escape_javascript(@no_releases) + '")';
+end

@@ -45,7 +45,10 @@ class ReleasesController < ApplicationController
         flash[:notice] = "Release deleted"
         redirect_to releases_path
       }
-      format.js {render :json => @release}
+      format.js {
+        @release_count = Release.all.count
+        @no_releases = render_to_string "_no_releases"  
+      }
     end
   end
   
