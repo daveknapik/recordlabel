@@ -60,4 +60,6 @@ Recordlabel::Application.routes.draw do
       get :confirm_destroy
     end
   end
+  
+  root :to => 'releases#index'
 end
