@@ -1,6 +1,6 @@
 class ReleasesController < ApplicationController
   def index
-    @releases = Release.find(:all,:order => "created_at desc")
+    @releases = Release.order("created_at desc")
   end
   
   def show
