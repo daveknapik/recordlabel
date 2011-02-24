@@ -109,6 +109,11 @@ form input[type=submit], .form-required {
 	width: auto;
 }
 
+form textarea
+{
+   resize: none;
+}
+
 #submit-btn {
     background-color: #666;
     color: #FFF;
