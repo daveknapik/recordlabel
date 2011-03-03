@@ -14,10 +14,14 @@ Scenario:
 	Given I am on its edit release page
 	And I fill in "Title" with "An Ark for the Listener"
 	And I fill in "Description" with "Everyone loves Jeck"
+	And I fill in "Duration" with "49:22"
+	And I fill in "Catalogue Number" with "TO:82"
 	When I press "Submit"
 	Then I should be on the release list page
 	And I should see "An Ark for the Listener"
 	And I should see "Everyone loves Jeck"
+	And I should see "49:22"
+	And I should see "TO:82"
 	
 Scenario:
 	Given there is one release
