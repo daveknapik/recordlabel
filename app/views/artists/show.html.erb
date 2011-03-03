@@ -2,3 +2,11 @@
 	<h1><%= @artist.name %></h1>
 	<p><%= @artist.bio %></p>
 </div>
+
+<h2>Releases</h2>
+
+<%- if @artist.releases.empty? -%>
+	<p>This artist has no releases.</p>
+<%- else -%>
+	<%= render @artist.releases %>
+<%- end -%>

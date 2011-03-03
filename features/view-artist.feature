@@ -10,3 +10,4 @@ Scenario:
 	Then I should be on the artist page
 	And I should see the artist name
 	And I should see the artist bio
+	And I should see the artists releases
