@@ -61,5 +61,7 @@ Recordlabel::Application.routes.draw do
     end
   end
   
+  resources :artists
+  
   root :to => 'releases#index'
 end

@@ -10,7 +10,7 @@ describe ReleasesController do
   
   describe "#create" do
     it "should create a new release" do
-      post :create, "release" => {"title" => "Endless Summer", "description" => "Everyone loves Fennesz"}
+      post :create, "release" => {"artist_name" => "Fennesz", "title" => "Endless Summer", "description" => "Everyone loves Fennesz"}
       assigns(:release).should_not be_nil
       assigns(:release).title.should == "Endless Summer"
     end
