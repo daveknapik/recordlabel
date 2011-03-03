@@ -35,6 +35,9 @@ module NavigationHelpers
   when /the release confirm destroy page/
     confirm_destroy_release_path @release
     
+  when /the artist page/
+    artist_path @artist
+    
     else
       begin
         page_name =~ /the (.*) page/
