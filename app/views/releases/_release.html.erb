@@ -2,8 +2,12 @@
 	<h3><%= link_to release.title, release_path(release) %></h3>
 	<p><%= release.description %></p>
 	<p>
-		Duration: <%= release.duration %><br>
-		Catalogue Number: <%= release.catalogue_number %>
+		<% unless release.duration.blank? %>
+			Duration: <%= release.duration %><br>
+		<% end %>
+		<% unless release.catalogue_number.blank? %>
+			Catalogue Number: <%= release.catalogue_number %>
+		<% end %>
 	</p>
 	<p>
 		<%= link_to 'Edit', edit_release_path(release), :id => "edit" << release.id.to_s %>

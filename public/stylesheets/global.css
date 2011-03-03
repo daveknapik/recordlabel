@@ -70,8 +70,9 @@ form ol li {
 
 form label {
 	float: left;
-	width: 110px;
+	width: 150px;
 	font-family: Arial, sans-serif;
+	font-size: 14px;
 }
 
 form fieldset:last-of-type {
