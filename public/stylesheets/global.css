@@ -26,6 +26,17 @@ ol, ul {
 	margin: 0 0 10px 0;
 }
 
+.artistsreleases {
+	background: #4487C2;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 960px;
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
+
+
 .notice {
 	background: yellow;
 	-moz-border-radius: 5px;

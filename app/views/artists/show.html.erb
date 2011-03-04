@@ -8,5 +8,5 @@
 <%- if @artist.releases.empty? -%>
 	<p>This artist has no releases.</p>
 <%- else -%>
-	<%= render @artist.releases %>
+	<%= render :partial => "releases/release", :collection => @artist.releases, :locals => {:release_class => "artistsreleases"} %>
 <%- end -%>

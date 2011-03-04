@@ -1,4 +1,4 @@
-<div id="release<%= release.id %>" class="release">
+<div id="release<%= release.id %>" class="<%= release_class ||= 'release'  %>">
 	<h3><%= link_to release.artist.name, artist_path(release.artist) %> - <%= link_to release.title, release_path(release) %></h3>
 	<p><%= raw release.description %></p>
 	<p>
