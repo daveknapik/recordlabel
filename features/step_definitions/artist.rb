@@ -10,6 +10,11 @@ Given /^there is one artist with no releases$/ do
   @artist = Factory.create(:artist, :name => "Fennesz", :bio => "Austrian guitar and laptop composer")
 end
 
+Given /^there is one artist$/ do
+  Artist.destroy_all
+  @artist = Factory.create(:artist, :name => "Fennesz", :bio => "Austrian guitar and laptop composer")
+end
+
 When /^I follow the artist name$/ do
   click_link @artist.name
 end

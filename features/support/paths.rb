@@ -38,6 +38,9 @@ module NavigationHelpers
   when /the artist page/
     artist_path @artist
     
+  when /its edit artist page/
+    edit_artist_path @artist
+    
     else
       begin
         page_name =~ /the (.*) page/
