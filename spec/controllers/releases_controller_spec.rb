@@ -37,8 +37,7 @@ describe ReleasesController do
   
   describe "#edit" do
     it "should be successful" do
-      #@release = mock_model(Release)
-      @release = Factory.build(:release)
+      @release = Factory.create(:release)
       Release.should_receive(:find).and_return(@release)
       get :edit, {:id => 1}
       response.should be_success

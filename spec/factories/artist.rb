@@ -1,6 +1,4 @@
-FactoryGirl.define do
-  factory :artist do
-    name 'Philip Jeck'
-    bio 'Superstar DJ extraordinaire'
-  end
+Factory.define :artist do |f|
+  f.name 'Philip Jeck'
+  f.bio 'Superstar DJ extraordinaire'
 end

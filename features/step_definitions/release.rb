@@ -1,6 +1,6 @@
 Given /^there is one release$/ do
   Release.destroy_all
-  @release = Factory.create(:release, :artist_name => "Fennesz", :title => "Endless Summer", :description => "Everyone loves Fennesz")
+  @release = Factory.create(:release)
 end
 
 Given /^there are releases$/ do 

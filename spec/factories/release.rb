@@ -1,6 +1,6 @@
-FactoryGirl.define do
-  factory :release do
-    title 'Endless Summer'
-    description 'Everyone loves Fennesz'
-  end
+Factory.define :release do |f|
+  f.title 'Endless Summer'
+  f.description 'Everyone loves Fennesz'
+  f.sequence(:catalogue_number) {|n| "TO:#{n}"}
+  f.association :artist
 end

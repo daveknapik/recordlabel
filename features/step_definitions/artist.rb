@@ -1,18 +1,19 @@
 Given /^there is one artist with some releases$/ do
   Artist.destroy_all
-  @artist = Factory.create(:artist, :name => "Fennesz", :bio => "Austrian guitar and laptop composer")
-  @release = Factory.create(:release, :artist_name => "Fennesz", :title => "Endless Summer", :description => "Everyone loves Fennesz")
-  @release = Factory.create(:release, :artist_name => "Fennesz", :title => "Venice", :description => "This one's good, too!")
+  Release.destroy_all
+  @artist = Factory.create(:artist)
+  @release = Factory.create(:release, :artist => @artist)
+  @release = Factory.create(:release, :artist => @artist)
 end
 
 Given /^there is one artist with no releases$/ do
   Artist.destroy_all
-  @artist = Factory.create(:artist, :name => "Fennesz", :bio => "Austrian guitar and laptop composer")
+  @artist = Factory.create(:artist)
 end
 
 Given /^there is one artist$/ do
   Artist.destroy_all
-  @artist = Factory.create(:artist, :name => "Fennesz", :bio => "Austrian guitar and laptop composer")
+  @artist = Factory.create(:artist)
 end
 
 When /^I follow the artist name$/ do

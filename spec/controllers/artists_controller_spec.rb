@@ -13,7 +13,7 @@ describe ArtistsController do
   
   describe "#edit" do
     it "should be successful" do
-      @artist = Factory.build(:artist)
+      @artist = Factory.create(:artist)
       Artist.should_receive(:find).and_return(@artist)
       get :edit, {:id => 1}
       response.should be_success
@@ -34,7 +34,7 @@ describe ArtistsController do
       
       it "should update the artist's attributes" do
         @artist.should_receive(:update_attributes).and_return(true)
-        put :update, {:id => 1, :name => "Dave Knapik", :bio => "Minister of Caps"}
+        put :update, Factory.attributes_for(:artist, {:id => 1})
       end
 
       it "should redirect you to the artist page" do
