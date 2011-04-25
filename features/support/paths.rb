@@ -10,37 +10,37 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+      
+    when /the new release page/
+      new_release_path
+
+    when /the edit1 release page/
+      edit_release_path @releases[0]
+
+    when /its edit release page/
+      edit_release_path @release  
+
+    when /the release list page/
+      releases_path
+
+    when /the release page/
+      release_path @release
+
+    when /the release confirm destroy page/
+      confirm_destroy_release_path @release
+
+    when /the artist page/
+      artist_path @artist
+
+    when /its edit artist page/
+      edit_artist_path @artist
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-    
-  when /the new release page/
-    new_release_path
-    
-  when /the edit1 release page/
-    edit_release_path @releases[0]
-  
-  when /its edit release page/
-    edit_release_path @release  
-    
-  when /the release list page/
-    releases_path
-    
-  when /the release page/
-    release_path @release
-    
-  when /the release confirm destroy page/
-    confirm_destroy_release_path @release
-    
-  when /the artist page/
-    artist_path @artist
-    
-  when /its edit artist page/
-    edit_artist_path @artist
-    
+
     else
       begin
         page_name =~ /the (.*) page/
